@@ -25,9 +25,9 @@ public class DBUtils {
 //        String username="medunnadb_user";
 //        String password="Medunnadb_@129";
 
-        String url= ConfigReader.getProperty("db_credentials_url");
-        String username= ConfigReader.getProperty("db_username");
-        String password= ConfigReader.getProperty("db_password");
+        String url= ConfigurationReader.getProperty("db_credentials_url");
+        String username= ConfigurationReader.getProperty("db_username");
+        String password= ConfigurationReader.getProperty("db_password");
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {

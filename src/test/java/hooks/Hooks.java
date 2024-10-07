@@ -1,4 +1,4 @@
-package pages;
+package hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -7,7 +7,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utilities.ConfigReader;
+import utilities.ConfigurationReader;
 
 import utilities.DBUtils;
 import utilities.Driver;
@@ -19,7 +19,7 @@ public class Hooks {
 
     @Before(value="@Api")
     public void setUp(){
-        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("medunnaUrl")).build();
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("medunnaUrl")).build();
     }
 
     @Before(value="@Db")
@@ -29,7 +29,7 @@ public class Hooks {
 
     @Before(order = 1, value = "@UIRegistration")
     public void navigateToRegistration(){
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunnaRegistration"));
     }
 
 

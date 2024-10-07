@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-public class ConfigReader {
+public class ConfigurationReader {
 
     public static Properties properties;
 
