@@ -4,9 +4,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
-
         plugin = {
                 "pretty",
                 "html:target//cucumber-reports.html",
@@ -17,15 +17,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = {"stepDefinitions","hooks"},
-        tags = "@US001",
-        dryRun = false
+        tags = "  @US001",
+        dryRun = true
 )
-
-
-
 public class Runner {
-
-
-
 
 }

@@ -6,30 +6,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DBUtils {
+public class DatabaseUtility {
 
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
 
 
-
     /**
      * DBUtils.createConnection(); -> to connect to teh database
-     * @return
      */
     public static void createConnection() {
-//        String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
-//        String username="techprodb_user";
-//        String password="Techpro_@126";;
-
-//        String url = "jdbc:postgresql://medunna.com:5432/medunna_db";
-//        String username="medunnadb_user";
-//        String password="Medunnadb_@129";
-
-        String url= ConfigurationReader.getProperty("db_credentials_url");
-        String username= ConfigurationReader.getProperty("db_username");
-        String password= ConfigurationReader.getProperty("db_password");
+        String url = "jdbc:postgresql://medunna.com:5432/medunna_db";
+        String username="medunnadb_user";
+        String password="Medunnadb_@129";
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -48,7 +38,6 @@ public class DBUtils {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         try {
             resultSet = statement.executeQuery(query);
         } catch (SQLException e) {
@@ -223,5 +212,4 @@ public class DBUtils {
         }
         return columns;
     }
-
 }

@@ -7,21 +7,25 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
-    public static Properties properties;
-
+    private static Properties properties;
     static {
+
         String path = "configuration.properties";
         try {
-            FileInputStream fis= new FileInputStream(path);
-            properties=new Properties();
-            properties.load(fis);
-        } catch (IOException e) {
+
+            FileInputStream file = new FileInputStream(path);
+
+            properties= new Properties();
+            properties.load(file);
+
+            file.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public  static String getProperty(String key){
-
+    //    This method accepts the key and returns the value
+    public static String getProperty(String key){
         return properties.getProperty(key);
     }
 
