@@ -20,9 +20,14 @@ public class MustafaPage extends BasePage{
     @FindBy(xpath = "//div[1]/div[@class='invalid-feedback']")
     public WebElement registerSSNInvalidFeedbackText;
 
+    @FindBy(xpath = "//div[2]/div[@class='invalid-feedback']")
+    public WebElement registerFirstNameInvalidFeedbackText;
 
+    @FindBy(xpath = "//input[@id='lastName']")
+    public WebElement lastNameTextBox;
 
-
+    @FindBy(xpath = "//div[3]/div[@class='invalid-feedback']")
+    public WebElement registerLastNameInvalidFeedbackText;
 
 
 }

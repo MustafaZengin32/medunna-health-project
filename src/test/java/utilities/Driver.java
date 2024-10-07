@@ -29,7 +29,7 @@ import java.util.NoSuchElementException;
 
 public class Driver {
     //create a driver instance
-    private static int timeout = 5;
+    private static int timeout = 10;
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
     //What?=>It is just to create, initialize the driver instance.(Singleton driver)
@@ -72,6 +72,14 @@ public class Driver {
                     }
                     WebDriverManager.edgedriver().setup();
                     driverPool.set(new EdgeDriver());
+                    break;
+                case "chrome_headless":
+                    WebDriverManager.chromedriver().setup();
+                    driverPool.set(new ChromeDriver(new ChromeOptions().addArguments("--headless=new")));
+                    break;
+                case "firefox_headless":
+                    WebDriverManager.firefoxdriver().setup();
+                    driverPool.set(new FirefoxDriver(new FirefoxOptions().addArguments("--headless=new")));
                     break;
                 case "safari":
                     if (!System.getProperty("os.name").toLowerCase().contains("mac")) {
