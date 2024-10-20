@@ -6,7 +6,7 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -18,7 +18,9 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5d74df92-e67e-44ee-956c-ea8a037831d8">
       <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select ssn from jhi_user]]></console>
-      <console name="Connection 3" type="STANDARD" schema="" session="Main" />
+      <console name="Connection 3" type="STANDARD" schema="" session="Main"><![CDATA[SELECT * FROM jhi_user WHERE ssn='345-60-9';
+
+select * from jhi_user;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -26,11 +28,14 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="5d74df92-e67e-44ee-956c-ea8a037831d8" object-ref="consoles/Connection" />
+      <object connection-id="5d74df92-e67e-44ee-956c-ea8a037831d8" object-ref="consoles/Connection 3" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="5d74df92-e67e-44ee-956c-ea8a037831d8" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="5d74df92-e67e-44ee-956c-ea8a037831d8" dataset="public.jhi_user" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />

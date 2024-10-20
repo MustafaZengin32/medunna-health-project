@@ -53,7 +53,9 @@ Feature: US001 Registration should be available using SSN, Firstname and Lastnam
 
     Examples: test data
       | ssn         |
-      | 856-45-6789 |
+      | 345-60-9378 |
+
+
 
 
 

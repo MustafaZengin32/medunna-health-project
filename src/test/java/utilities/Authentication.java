@@ -18,8 +18,8 @@ public class Authentication {
 
 
     public static String generateToken(){
-        String username = "Team90Admin";
-        String password = "Batch44+";
+        String username = "mark_twain";
+        String password = "Mark.123";
 
         Map<String,Object>map = new HashMap<String,Object>();
         map.put("username", username);
