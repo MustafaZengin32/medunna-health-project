@@ -4,10 +4,31 @@ import org.apache.commons.compress.archivers.zip.X000A_NTFS;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.List;
+public class MustafaPage008 {
 
+    @FindBy (id="account-menu")
+    public WebElement userPageAccounMenu;
 
-public class MustafaPage003 extends BasePage {
+    @FindBy (xpath = "//*[.='Password']")
+    public WebElement userPagePasswordButton;
 
+    @FindBy (id="currentPassword")
+    public WebElement userCurrentPassword;
+
+    @FindBy (id="newPassword")
+    public WebElement userNewPassword;
+
+    @FindBy (id="confirmPassword")
+    public WebElement userConfirmationPassword;
+
+    @FindBy (xpath = "(//*[.='Save'])[2]")
+    public WebElement userPasswordSaveButton;
+
+    @FindBy (xpath = "(//*[.='Password changed!'])[3]")
+    public WebElement passwordChangedToastContainerSuccessMessage;
+
+    @FindBy (xpath = "//*[.='Sign out']")
+    public WebElement userSignOutButton;
 
     @FindBy(xpath = "(//*[.='Register'])[1]")
     public WebElement accountMenuRegisterButton;
@@ -272,6 +293,5 @@ public class MustafaPage003 extends BasePage {
 
     @FindBy (xpath = "//*[.='Field translation-not-found[hospitalmsappfrontendApp.CState.country] cannot be empty!']")
     public WebElement successfullyCreatedANewStateCityText;
-
 
 }

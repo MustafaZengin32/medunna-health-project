@@ -129,7 +129,7 @@ Feature: US001 Registration should be available using SSN, Firstname and Lastnam
     And MKT user click SSN textbox
     And MKT verify that -Your LastName is required.- text appears
 
-  @API @API001
+  @Api @API001
   Scenario: TC00114 Create registrants using api and validate
 
     Given MKT User set the path params for register

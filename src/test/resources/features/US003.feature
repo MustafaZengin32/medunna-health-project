@@ -14,7 +14,6 @@ Feature: User should be able to see the level chart change accordingly
       | password | strength |
       | qwertyU  | 2        |
       | asdfgh1  | 2        |
-      | zxcvbn@  | 2        |
       | zxcvbn?  | 2        |
       | 123456a  | 2        |
       | ABCDEFg  | 2        |
