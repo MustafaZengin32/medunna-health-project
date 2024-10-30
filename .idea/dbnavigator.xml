@@ -27,9 +27,7 @@ select * from jhi_user;]]></console>
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="5d74df92-e67e-44ee-956c-ea8a037831d8" object-ref="consoles/Connection 3" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="5d74df92-e67e-44ee-956c-ea8a037831d8" />

@@ -4,42 +4,41 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.MustafaPage;
+import pages.MustafaPage001;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
-public class US001 {
+public class US001Ui {
 
-    MustafaPage page =new MustafaPage();
-
+    MustafaPage001 kP = new MustafaPage001();
     @Given("MKT user enter the mainpage")
     public void mkt_user_enter_the_mainpage() {Driver.getDriver().get(ConfigurationReader.getProperty("medunnaUrl"));
     }
     @Given("MKT user click the top user button")
     public void mkt_user_click_the_top_user_button() {
-       page.accountMenuIcon.click();
+        kP.accountMenuIcon.click();
 
     }
     @Then("MKT user click the register button")
     public void mkt_user_click_the_register_button() {
-        page.dropdownRegisterButton.click();
+        kP.dropdownRegisterButton.click();
     }
     @Then("MKT user click SSN textbox")
     public void mkt_user_click_ssn_textbox() {
-        page.registerSSNTextBox.click();
+        kP.registerSSNTextBox.click();
     }
     @Then("MKT user input  {string} number in SSN textbox")
     public void mkt_user_input_number_in_SSN_textbox(String invalidSSN) {
-        page.registerSSNTextBox.sendKeys(invalidSSN);
+        kP.registerSSNTextBox.sendKeys(invalidSSN);
     }
     @Then("MKT user click the First Name textbox")
     public void mkt_user_click_the_first_name_textbox() {
-        page.firstNameTextBox.click();
+        kP.firstNameTextBox.click();
     }
 
     @And("MKT verify that {string} text appears")
     public void mktVerifyThatTextAppears(String expectedOutput) {
-        String actualOutput = page.registerSSNInvalidFeedbackText.getText();
+        String actualOutput = kP.registerSSNInvalidFeedbackText.getText();
         Assert.assertEquals(expectedOutput,actualOutput);
     }
 
@@ -47,7 +46,7 @@ public class US001 {
     public void mktVerifyThatYourFirstNameIsRequiredTextDidnTAppear() {
         boolean assertionFlag = true;
         try {
-            page.registerFirstNameInvalidFeedbackText.isDisplayed();
+            kP.registerFirstNameInvalidFeedbackText.isDisplayed();
         } catch (Exception e) {
             assertionFlag = false;
         }
@@ -56,39 +55,48 @@ public class US001 {
 
     @And("MKT verify that -Your FirstName is required.- text appears")
     public void mktVerifyThatYourFirstNameIsRequiredTextAppears() {
-        Assert.assertTrue(page.registerFirstNameInvalidFeedbackText.isDisplayed());
+        Assert.assertTrue(kP.registerFirstNameInvalidFeedbackText.isDisplayed());
     }
 
-
-    @Then("MKT user input  {string} in firstname textbox")
-    public void mktUserInputInFirstnameTextbox(String firstname) {
-        page.firstNameTextBox.sendKeys(firstname);
-    }
-
-    @And("MKT user click the Last Name textbox")
-    public void mktUserClickTheLastNameTextbox() {
-        page.lastNameTextBox.click();
-    }
-
-    @Then("MKT user input  {string} in lastName textbox")
-    public void mktUserInputInLastNameTextbox(String lastName) {
-        page.lastNameTextBox.sendKeys(lastName);
-    }
-
-    @And("MKT verify that -Your LastName is required.- text didn't appear")
-    public void mktVerifyThatYourLastNameIsRequiredTextDidnTAppear() {
+    @And("MKT verify that -Your SSN is invalid- text didn't appear")
+    public void mktVerifyThatYourSSNIsInvalidTextDidnTAppear() {
         boolean assertionFlag = true;
         try {
-            page.registerLastNameInvalidFeedbackText.isDisplayed();
+            kP.registerSSNInvalidFeedbackText.isDisplayed();
         } catch (Exception e) {
             assertionFlag = false;
         }
         Assert.assertFalse(assertionFlag);
     }
 
-    @And("MKT verify that -Your SSN is invalid- text didn't appear")
-    public void mktVerifyThatYourSSNIsInvalidTextDidnTAppear() {
+    @Then("MKT user input  {string} in firstname textbox")
+    public void mktUserInputInFirstnameTextbox(String firstname) {
+        kP.firstNameTextBox.sendKeys(firstname);
     }
 
+    @And("MKT user click the Last Name textbox")
+    public void mktUserClickTheLastNameTextbox() {
+        kP.lastNameTextBox.click();
+    }
 
+    @Then("MKT user input  {string} in lastName textbox")
+    public void mktUserInputInLastNameTextbox(String lastName) {
+        kP.lastNameTextBox.sendKeys(lastName);
+    }
+
+    @And("MKT verify that -Your LastName is required.- text didn't appear")
+    public void mktVerifyThatYourLastNameIsRequiredTextDidnTAppear() {
+        boolean assertionFlag = true;
+        try {
+            kP.registerLastNameInvalidFeedbackText.isDisplayed();
+        } catch (Exception e) {
+            assertionFlag = false;
+        }
+        Assert.assertFalse(assertionFlag);
+    }
+
+    @And("MKT verify that -Your LastName is required.- text appears")
+    public void mktVerifyThatYourLastNameIsRequiredTextAppears() {
+        Assert.assertTrue(kP.registerLastNameInvalidFeedbackText.isDisplayed());
+    }
 }

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
-public class MustafaPage extends BasePage{
+public class MustafaPage001 extends BasePage{
 
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement accountMenuIcon;
