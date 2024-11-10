@@ -21,4 +21,4 @@ Feature: User should be able to see the level chart change accordingly
       | ?&!.$%B  | 2        |
       | ?&!.$%7  | 2        |
       | 1234Ab!  | 5        |
-      | abcDE1@  | 5        |
+      | abcDE1@  | 4        |

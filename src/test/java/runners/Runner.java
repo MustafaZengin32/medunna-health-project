@@ -15,9 +15,10 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
         },
+        publish = true,
         features = "src/test/resources/features",
         glue = {"stepDefinitions","hooks"},
-        tags = "@US_012_smoke_test",
+        tags = "@Mustafa005",
         dryRun = false
 )
 public class Runner {

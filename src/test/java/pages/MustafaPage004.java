@@ -35,7 +35,7 @@ public class MustafaPage004 extends BasePage{
     @FindBy(xpath = " //span[text()='Did you forget your password?']")
     public WebElement didYouForgetYourPassword;
 
-    @FindBy(xpath = "//span[text()='Cemile Turkmen']")
+    @FindBy(xpath = "(//*[name()='path'][@fill='currentColor'])[13]")
     public WebElement accountName;
 
     @FindBy(xpath = "//span[text()='Cancel']")
@@ -66,6 +66,10 @@ public class MustafaPage004 extends BasePage{
 
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement containerDidYouForget;
+
+    @FindBy(tagName = "h1")
+    public WebElement welcomeAfterAdminSign;
+
 
 
 }

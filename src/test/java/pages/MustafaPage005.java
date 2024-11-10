@@ -29,7 +29,7 @@ public class MustafaPage005 extends BasePage{
     @FindBy(xpath ="//button/span[text()='Send an Appointment Request']" )
     public WebElement appointmentRequestButton;
 
-    @FindBy(xpath = "//div[contains(text(),'Saved')]")
+    @FindBy(xpath = "//strong[text()='Appointment registration saved!']")
     public WebElement savedToastContainer;
     @FindBy(xpath = "//span[text()='Melinda Patient']")    // US05
     public WebElement melindaPatientAccount;

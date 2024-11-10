@@ -17,7 +17,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5d74df92-e67e-44ee-956c-ea8a037831d8">
-      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select ssn from jhi_user]]></console>
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from jhi_user;]]></console>
       <console name="Connection 3" type="STANDARD" schema="" session="Main"><![CDATA[SELECT * FROM jhi_user WHERE ssn='345-60-9';
 
 select * from jhi_user;]]></console>

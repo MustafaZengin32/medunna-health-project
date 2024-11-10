@@ -161,12 +161,15 @@ public class US005Ui {
     @Then("MB Click Send An Appointment Request button and verify appointment success message which contains Registration saved")
     public void mb_click_send_an_appointment_request_button_and_verify_appointment_success_message_which_contains_registration_saved() {
         mP.appointmentRequestButton.click();
-        //Driver.wait(1);
 
-        System.out.println("toast " + mP.savedToastContainer.getText());
-        List<String> savedToastList= Arrays.asList(mP.savedToastContainer.getText().split("\\s"));
-        System.out.println("savedToastList = " + savedToastList);
+        Driver.wait(1);
+
+        Actions actions = new Actions(Driver.getDriver());
+
+        actions.moveToElement(mP.savedToastContainer).perform();
+
         Assert.assertTrue(mP.savedToastContainer.getText().contains("saved"));
+
         Driver.wait(1);
     }
 

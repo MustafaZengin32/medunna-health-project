@@ -76,6 +76,18 @@ Feature: US002 : Registration should be successful using email and username and 
       |SSN|firstname|  lastname|  username|  password|
       |323-54-3235| rana100  |  kurt100   |kurtt100 |kurtt100|
 
+  @Db @DbMustafa002
+  Scenario Outline: TC00207 Validate registrant email with DB
+
+    Given RT user creates a connection with db
+    And   RT user sends the query to db and gets the user data with login "<login>"
+    Then  RT validates db registrant data  "<email>"
+
+    Examples: test data
+
+      |email| login|
+      |kurt89@hotmail.com| kurt890|
+
 
 
 

@@ -130,11 +130,9 @@ Feature: US001 Registration should be available using SSN, Firstname and Lastnam
     And MKT verify that -Your LastName is required.- text appears
 
   @Api @API001
-  Scenario: TC00114 Create registrants using api and validate
+  Scenario: TC001_medunna_registration_post_API
 
-    Given MKT User set the path params for register
-    And MKT user enters expected data for register
-    And MKT user sends request and receives response for register
-    Then MKT user save all API information for register
-    Then MKT user verify API records for register
+    Given send post request to "https://medunna.com/api/register/" to create register
+    Then  verifying all
+
 

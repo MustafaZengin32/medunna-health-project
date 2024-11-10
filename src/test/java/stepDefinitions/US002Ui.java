@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import pages.MustafaPage002;
-import pojos.Registrant;
+import pojo.Registrant;
 import utilities.Driver;
 
 public class US002Ui {
