@@ -17,7 +17,7 @@ public class US003Ui {
     }
     @Given("FY User clicks on human icon")
     public void fy_user_clicks_on_human_icon() {
-        fP.accountmenu.click();
+        Driver.waitAndClick(fP.accountmenu);
         Driver.wait(2);
     }
     @Given("FY User clicks on Register button")

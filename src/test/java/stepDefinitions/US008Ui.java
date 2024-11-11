@@ -12,8 +12,9 @@ public class US008Ui {
     MustafaPage008 fP=new MustafaPage008();
 
     @Given("FY User clicks on sign in button under human icon at homepage")
-    public void fy_user_clicks_on_sign_in_button_under_human_icon_at_homepage() {
-        Driver.waitAndClick(fP.homePageSignIn,2);
+    public void fy_user_clicks_on_sign_in_button_under_human_icon_at_homepage1() {
+
+        Driver.waitAndClick(fP.homePageSignIn);
         Driver.wait(2);
     }
     @Given("FY User sends username {string} and password {string} in sign in page")

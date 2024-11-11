@@ -57,7 +57,7 @@ public class MustafaPage008 {
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement accountmenu;
 
-    @FindBy(xpath = "//a[@id='login-item']")
+    @FindBy(xpath="//a[@id='login-item']")
     public WebElement homePageSignIn;
 
     @FindBy(xpath = "//input[@id='username']")

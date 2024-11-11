@@ -28,10 +28,10 @@ public class MustafaPage006 extends BasePage{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//li[@id='account-menu']")
+    @FindBy(id = "account-menu")     //li[@id='account-menu']
     public WebElement accountMenu;
 
-    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    @FindBy(xpath = "//span[text()='Settings']")
     public WebElement accountSettings;
 
     @FindBy(xpath = "//input[@id='email']")

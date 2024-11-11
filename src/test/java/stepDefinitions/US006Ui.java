@@ -34,14 +34,18 @@ public class US006Ui {
     @Then("MKT user click the Sign in button")
     public void mkt_user_click_the_sign_in_button() {
         Driver.waitAndClick(kP.submitButton);
+        Driver.wait(2);
+
     }
     @Then("MKT user click the top left the button that have same name with username")
     public void mkt_user_click_the_top_left_the_button_that_have_same_name_with_username() {
-        Driver.waitAndClick(kP.accountMenu);
+        kP.accountMenu.click();
+        Driver.wait(2);
+
     }
     @Then("MKT user click settings at dropdown window")
     public void mkt_user_click_settings_at_dropdown_window() {
-        Driver.waitAndClick(kP.accountSettings);
+        kP.accountSettings.click();
     }
     @Then("MKT user click firstname textbox")
     public void mkt_user_click_firstname_textbox() {

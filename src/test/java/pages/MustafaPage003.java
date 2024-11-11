@@ -33,7 +33,7 @@ public class MustafaPage003 extends BasePage {
 
     //-----------US014 locators------------------
 
-    @FindBy(xpath = "//li[@id='account-menu']")
+    @FindBy(id = "account-menu")
     public WebElement accountmenu;
 
     @FindBy(xpath = "//a[@id='login-item']")
