@@ -8,8 +8,6 @@ public class MustafaPage002 extends BasePage{
 
     @FindBy(xpath = "//a[@aria-haspopup='true']")
     public WebElement dropDownmenu;
-    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
-    public WebElement loginDropdown;
 
     @FindBy(xpath = "//a[@href='/account/register']")
     public WebElement registerButton;
@@ -29,9 +27,6 @@ public class MustafaPage002 extends BasePage{
     public WebElement secondPasswordTextBox;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement registerSubmitButton;
-
-    @FindBy(xpath = "//*[@id='root']/div/div/div[1]/div/div/div[1]")
-    public WebElement successMessageToastContainer;
 
     @FindBy(xpath = "//*[@id='register-form']/div[5]/div")
     public WebElement yourEmailIsRequiredMessage;

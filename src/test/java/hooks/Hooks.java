@@ -16,10 +16,6 @@ public class Hooks {
 
     public static RequestSpecification spec;
 
-    @Before(order = 1, value = "@UIRegistration")
-    public void navigateToRegistration(){
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunnaRegistration"));
-    }
 
 
     @After(value="~@Api")

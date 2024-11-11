@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 public class Registrant {
 
-    private String login;//username
+    private String logn;//username
     private String firstName;
     private String lastName;
     private String email;

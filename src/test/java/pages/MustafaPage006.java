@@ -10,9 +10,6 @@ public class MustafaPage006 extends BasePage{
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement accountMenuIcon;
 
-    @FindBy(xpath = "//a[contains(@href,'register')]")
-    public WebElement dropdownRegisterButton;
-
     @FindBy(xpath = "//a[contains(@href,'login')]")
     public WebElement dropdownSignInButton;
 
@@ -28,7 +25,7 @@ public class MustafaPage006 extends BasePage{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submitButton;
 
-    @FindBy(id = "account-menu")     //li[@id='account-menu']
+    @FindBy(id = "account-menu")
     public WebElement accountMenu;
 
     @FindBy(xpath = "//span[text()='Settings']")
@@ -40,33 +37,11 @@ public class MustafaPage006 extends BasePage{
     @FindBy(xpath = "//*[contains(text(),'language')]")
     public WebElement anyLanguageElementOnPage;
 
-    @FindBy(xpath = "//input[@id='ssn']")
-    public WebElement registerSSNTextBox;
-
     @FindBy(xpath = "//input[@id='firstName']")
     public WebElement firstNameTextBox;
-
-    @FindBy(xpath = "//div[1]/div[@class='invalid-feedback']")
-    public WebElement registerSSNInvalidFeedbackText;
-
-    @FindBy(xpath = "//div[2]/div[@class='invalid-feedback']")
-    public WebElement registerFirstNameInvalidFeedbackText;
 
     @FindBy(xpath = "//input[@id='lastName']")
     public WebElement lastNameTextBox;
 
-    @FindBy(xpath = "//div[3]/div[@class='invalid-feedback']")
-    public WebElement registerLastNameInvalidFeedbackText;
 
-    @FindBy(xpath = "//span[text()='MY PAGES']/..")
-    public WebElement myPages;
-
-    @FindBy(xpath = "//span[text()='Search Patient']/..")
-    public WebElement searchPatient;
-
-    @FindBy(xpath = "//input[@name='ssn']")
-    public WebElement searchSsnTextBox;
-
-    @FindBy(xpath = "(//tr/td)[3]")
-    public List<WebElement> patientFirstNameList;
 }

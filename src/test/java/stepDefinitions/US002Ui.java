@@ -75,10 +75,6 @@ public class US002Ui {
         Driver.waitAndClick(rP.registerSubmitButton);
     }
 
-    // @Then("RT Success message displayed")
-    // public void rtsuccessMessageDisplayed() {
-    //  rP.successMessageToastContainer.isDisplayed();
-    // }
 
     @Then("RT Do not enter username in username box")
     public void rtDoNotEnterUsernameInUsernameBox() {
