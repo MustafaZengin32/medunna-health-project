@@ -14,10 +14,6 @@ import utilities.Driver;
 
 public class Hooks {
 
-    public static RequestSpecification spec;
-
-
-
     @After(value="~@Api")
     public void tearDown(Scenario scenario){
 

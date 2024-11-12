@@ -1,7 +1,7 @@
 @Mustafa006
 Feature: US006 User info segment (User Settings) should be editable on Homepage
 
-
+  @UI
   Scenario Outline: TC00601 There should be user firstname textbox to update
     Given MKT user enter the mainpage
     And  MKT user click the left top user sign in button

@@ -17,7 +17,6 @@ public class US001Ui {
     @Given("MKT user click the top user button")
     public void mkt_user_click_the_top_user_button() {
         kP.accountMenuIcon.click();
-
     }
     @Then("MKT user click the register button")
     public void mkt_user_click_the_register_button() {

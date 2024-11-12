@@ -16,7 +16,6 @@ import static org.junit.Assert.assertEquals;
 import static utilities.AdminAuthenticationMedunna.generateTokenForAdmin;
 
 public class US001Api {
-
     Faker faker = new Faker();
     RegistrationPostPojo expectedData;
     RegistrationPostPojo actualData;
@@ -31,7 +30,6 @@ public class US001Api {
     @Given("send post request to {string} to create register")
     public void send_post_request_to_create_register(String endPoint) {
 
-
         ArrayList<String> arrayList = new ArrayList<>();
 
         arrayList.add("string");
@@ -40,7 +38,6 @@ public class US001Api {
                 true, arrayList, "string", "2023-02-23T19:29:41.427Z", email, name, "string", "string", "string",
                 "2023-02-23T19:29:41.428Z", lastName, username, password, ssn);
 
-
         response = given()
                 .when()
                 .contentType(ContentType.JSON)
@@ -48,9 +45,7 @@ public class US001Api {
                 .headers("Authorization", "Bearer " + generateTokenForAdmin())
                 .post(endPoint);
 
-
       response.prettyPrint();
-
 
       assertEquals(201, response.getStatusCode());
     }

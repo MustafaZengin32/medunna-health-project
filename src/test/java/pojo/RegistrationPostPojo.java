@@ -2,29 +2,11 @@ package pojo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
+
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RegistrationPostPojo {
-    /*
-    {
-  "activated": true,
-  "authorities": [
-    "string"
-  ],
-  "createdBy": "string",
-  "createdDate": "2023-02-23T19:29:41.427Z",
-  "email": "string",
-  "firstName": "string",
-  "id": 0,
-  "imageUrl": "string",
-  "langKey": "string",
-  "lastModifiedBy": "string",
-  "lastModifiedDate": "2023-02-23T19:29:41.428Z",
-  "lastName": "string",
-  "login": "string",
-  "password": "string",
-  "ssn": "string"
-}
-     */
+
     private boolean activated;
     private ArrayList<String> authorities;
     private String createdBy;

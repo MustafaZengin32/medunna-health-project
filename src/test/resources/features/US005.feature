@@ -1,9 +1,8 @@
 @Mustafa005
-
 Feature: US005 : New customers (patients) should make an appoinment
   to processed in hospital
 
-  @US005positive
+  @UI @US005positive
   Scenario Outline: Test03: Make an Appointment - Verify Phone and Date
   TC00506 - TC00507 - TC00508 - TC00509
     Given MB Launch web browser and navigate to the home page
