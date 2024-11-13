@@ -138,18 +138,7 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <skipTests>false</skipTests>
-                    <includes>
-                        <include>**/runners/*TestRunner*.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
+            <!-- Surefire and Failsafe plugins for running the tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -159,18 +148,24 @@
                     <forkMode>perthread</forkMode>
                     <threadCount>3</threadCount>
                     <reuseForks>false</reuseForks>
-                    <argLine>-Duser.language=en</argLine>
-                    <argLine>-Xmx1024m</argLine>
-                    <argLine>-XX:MaxPermSize=256m</argLine>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <useFile>false</useFile>
                     <includes>
                         <include>**/runners/*TestRunner*.java</include>
                     </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
-            <!-- cucumber report icin  -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <includes>
+                        <include>**/runners/*TestRunner*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <!-- Reporting Plugin -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -183,50 +178,15 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>cucumber-jvm-example</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
-                                <param>**/json-reports/*.json</param><!-- rapor formati json olacak  -->
-                            </jsonFiles><classificationFiles>->
-                            <param>sample.properties</param>
-                            <param>other.properties</param>
-                        </classificationFiles>
+                                <param>${project.build.directory}/json-reports/*.json</param>
+                            </jsonFiles>
                         </configuration>
                     </execution>
                 </executions>
+
             </plugin>
 
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.0.0</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <projectName>cucumber-jvm-example</projectName>
-                    <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
-                    <skip>false</skip>
-                    <!-- output directory for the generated report -->
-                    <outputDirectory>target</outputDirectory>
-                    <!-- optional, defaults to outputDirectory if not specified -->
-                    <inputDirectory>target</inputDirectory>
-                    <jsonFiles>**/*.json</jsonFiles>
-                    <!-- optional, set true to group features by its Ids -->
-                    <mergeFeaturesById>true</mergeFeaturesById>
-                    <!-- optional, set true to get a final report with latest results of the same test from different test runs -->
-                    <mergeFeaturesWithRetest>true</mergeFeaturesWithRetest>
-                    <!-- optional, set true to fail build on test failures -->
-                    <checkBuildResult>false</checkBuildResult>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
